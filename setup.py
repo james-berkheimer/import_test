@@ -32,6 +32,7 @@ def read_requirements(path):
 setup(
     name="import_test",
     entry_points={
-        "console_scripts": ["it = it.__main__:main"]
+        "console_scripts": ["it = src.__main__:main"]
     },
+    packages=find_packages(exclude=["tests", ".github"]),
 )
